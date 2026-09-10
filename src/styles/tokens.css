@@ -1,0 +1,74 @@
+:root {
+  /* Base */
+  --graphite-900: #14171a;
+  --graphite-800: #1c2024;
+  --graphite-700: #262b30;
+  --graphite-600: #363c42;
+  --graphite-400: #6b7480;
+  --graphite-200: #b7bec5;
+
+  --concrete-100: #f5f3ee;
+  --concrete-200: #eae6dc;
+  --concrete-300: #d8d2c4;
+
+  /* Accent - highway/hazard signage, functional not decorative */
+  --amber-500: #ffb020;
+  --amber-600: #e69c14;
+  --amber-100: #fff2d9;
+
+  --signal-red: #e5484d;
+  --signal-red-100: #fbe4e4;
+  --teal-500: #2da58e;
+  --teal-100: #e0f3ef;
+
+  /* Type */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  /* Radius - sharp, industrial. Not the rounded SaaS-card default. */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --shadow-panel: 0 1px 0 rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* Respect reduced motion preference throughout the app */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
